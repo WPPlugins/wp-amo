@@ -1,0 +1,64 @@
+#amoshortcode_button button
+{
+    padding-right: 20px;
+}
+
+.amo-shortcode-settings-page #col-left,
+.amo-shortcode-settings-page #col-right
+{
+    width: 50%;
+}
+
+.amo-shortcode-settings-page #col-right
+{
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.shortcode-list
+{
+    background: #FFF;
+    border: 1px solid #ddd;
+}
+.shortcode-list th
+{
+    text-align: left;
+    padding: 5px;
+}
+.shortcode-list td
+{
+    padding: 5px;
+}
+.shortcode-list tr:nth-child(even)
+{
+    background: #eee;
+}
+
+#list-fields-table tbody tr
+{
+    cursor: move;
+}
+#list-fields-table tbody td
+{
+    word-break: break-all;
+    width: 16%;
+}
+.add-multiple-option
+{
+    font-weight: bold;
+}
+
+.ui-front
+{
+    z-index:99999 !important;
+}
+
+#wp-amo-media-button {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#wp-amo-media-button img {
+    width: 18px;
+    padding-bottom: 2px;
+}

@@ -1,0 +1,355 @@
+$border-color: #ccc;
+
+.amo_wrapper {
+	margin: .25em 0;
+	padding: .5em 0;
+
+	.amo-subtitle,
+	.amo-form-title {
+		margin: 0;
+		font-weight: bold;
+	}
+
+	.amo-label {
+		font-style: italic;
+	}
+
+	form {
+		margin-top: 1em;
+		margin-bottom: 1em;
+
+		.amo-form-group {
+			margin-bottom: 1em;
+		}
+
+		label {
+			display: block;
+		}
+		input,
+		select {
+			width: 400px
+		}
+	}
+
+	button {
+		word-wrap: normal;
+	}
+
+	.amo_wrapper-item {
+		border-bottom: 1px solid $border-color;
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+	}
+
+	.amo-panel {
+		border: 1px solid $border-color;
+		border-radius: 10px;
+
+		.amo-panel-header {
+			background-color: #ddd;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			border-bottom: 1px solid $border-color;
+
+			h2.amo-title {
+				color: #000;
+				margin: 0;
+				padding: 0.5em;
+			}
+		}
+
+		.amo-panel-body {
+			padding: 1em;
+		}
+	}
+
+	.table-hover {
+		> tbody > tr:hover {
+			background-color: $border-color;
+		}
+	}
+	// https://github.com/twbs/bootstrap/blob/master/less/tables.less
+	.table-responsive {
+		overflow-x: auto;
+		min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+
+		@media screen and (max-width: 767px) {
+			width: 100%;
+			margin-bottom: 0.75em;
+			overflow-y: hidden;
+			-ms-overflow-style: -ms-autohiding-scrollbar;
+			border: 1px solid $border-color;
+
+			// Tighten up spacing
+			> .table {
+				margin-bottom: 0;
+
+				// Ensure the content doesn't wrap
+				> thead,
+				> tbody,
+				> tfoot {
+					> tr {
+						> th,
+						> td {
+							white-space: nowrap;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.pagination {
+		display: inline-block;
+		padding-left: 0;
+		margin: 20px 0;
+		border-radius: 4px;
+	}
+	.pagination > li {
+		display: inline;
+	}
+	.pagination > li > a,
+	.pagination > li > span {
+		position: relative;
+		float: left;
+		padding: 6px 12px;
+		line-height: 1.42857143;
+		text-decoration: none;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		margin-left: -1px;
+	}
+	.pagination > li:first-child > a,
+	.pagination > li:first-child > span {
+		margin-left: 0;
+		border-bottom-left-radius: 4px;
+		border-top-left-radius: 4px;
+	}
+	.pagination > li:last-child > a,
+	.pagination > li:last-child > span {
+		border-bottom-right-radius: 4px;
+		border-top-right-radius: 4px;
+	}
+	.pagination > li > a:hover,
+	.pagination > li > span:hover,
+	.pagination > li > a:focus,
+	.pagination > li > span:focus {
+		z-index: 2;
+		background-color: #eee;
+		border-color: #ddd;
+	}
+	.pagination > .active > a,
+	.pagination > .active > span,
+	.pagination > .active > a:hover,
+	.pagination > .active > span:hover,
+	.pagination > .active > a:focus,
+	.pagination > .active > span:focus {
+		z-index: 3;
+		cursor: default;
+	}
+	.pagination > .disabled > span,
+	.pagination > .disabled > span:hover,
+	.pagination > .disabled > span:focus,
+	.pagination > .disabled > a,
+	.pagination > .disabled > a:hover,
+	.pagination > .disabled > a:focus {
+		background-color: #fff;
+		border-color: #ddd;
+		cursor: not-allowed;
+	}
+	.pagination-lg > li > a,
+	.pagination-lg > li > span {
+		padding: 10px 16px;
+		font-size: 18px;
+		line-height: 1.3333333;
+	}
+	.pagination-lg > li:first-child > a,
+	.pagination-lg > li:first-child > span {
+		border-bottom-left-radius: 6px;
+		border-top-left-radius: 6px;
+	}
+	.pagination-lg > li:last-child > a,
+	.pagination-lg > li:last-child > span {
+		border-bottom-right-radius: 6px;
+		border-top-right-radius: 6px;
+	}
+	.pagination-sm > li > a,
+	.pagination-sm > li > span {
+		padding: 5px 10px;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+	.pagination-sm > li:first-child > a,
+	.pagination-sm > li:first-child > span {
+		border-bottom-left-radius: 3px;
+		border-top-left-radius: 3px;
+	}
+	.pagination-sm > li:last-child > a,
+	.pagination-sm > li:last-child > span {
+		border-bottom-right-radius: 3px;
+		border-top-right-radius: 3px;
+	}
+}
+
+#amo_member_directory,
+#amo_member_directory_organization {
+
+	table {
+		min-width: 620px;
+
+		th, td {
+			font-size: 14px;
+
+			button {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+
+}
+
+#amo_members_organizations {
+
+	.amo_wrapper-item {
+		clear: both;
+		display: table;
+		width: 100%;
+	}
+
+	.amo-profile-thumb {
+		display: table-cell;
+		padding-right: 26px;
+		height: 150px;
+		width: 176px;
+		vertical-align: top;
+	}
+
+	ul {
+		display: table-cell;
+		list-style: none;
+		padding: 0;
+		vertical-align: top;
+	}
+
+	@media (max-width: 480px) {
+		.amo_wrapper-item,
+		.amo-profile-thumb,
+		ul {
+			display: block;
+		}
+
+		.amo-profile-thumb {
+			height: auto;
+			padding-bottom: 26px;
+			padding-right: 0;
+			width: 100%;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
+/* AMO Calendar Shortcode */
+.amo_calendar {
+	a {
+		cursor: pointer;
+	}
+
+	// Undoing common WP themes CSS
+	.fc {
+		table {
+			margin: 0;
+		}
+
+		tr {
+			border-bottom: inherit;
+		}
+
+		// Allow multi-line event titles
+		.fc-day-grid-event > .fc-content {
+			white-space: normal;
+		}
+
+		.entry-content & {
+			tr td, tr th, thead th {
+				padding: 0;
+			}
+		}
+	}
+
+	#overlay {
+		display: none;
+	}
+
+	#spinner {
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin: -12.5px 0 0 -35px;
+		width: 70px;
+		z-index: 1000;
+
+		.spinner {
+			> div {
+				width: 18px;
+				height: 18px;
+				background-color: #ccc;
+				border-radius: 100%;
+				display: inline-block;
+				-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+				animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+			}
+
+			.bounce1 {
+				-webkit-animation-delay: -0.32s;
+				animation-delay: -0.32s;
+			}
+
+			.bounce2 {
+				-webkit-animation-delay: -0.16s;
+				animation-delay: -0.16s;
+			}
+		}
+	}
+
+	@-webkit-keyframes sk-bouncedelay {
+		0%, 80%, 100% {
+			-webkit-transform: scale(0)
+		}
+		40% {
+			-webkit-transform: scale(1.0)
+		}
+	}
+
+	@keyframes sk-bouncedelay {
+		0%, 80%, 100% {
+			-webkit-transform: scale(0);
+			transform: scale(0);
+		}
+		40% {
+			-webkit-transform: scale(1.0);
+			transform: scale(1.0);
+		}
+	}
+}
+
+.ui-dialog {
+	// Set dialog to high z-index so it doesn't get covered by navbars and such.
+	z-index: 100000 !important;
+	// Remove focus highlight Firefox applies to dialog close button.
+	&-titlebar {
+		button,
+		[type="button"],
+		[type="reset"],
+		[type="submit"] {
+			&:-moz-focusring {
+				outline: none;
+			}
+		}
+	}
+}

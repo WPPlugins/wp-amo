@@ -1,0 +1,1 @@
+<p><?php echo __('This content can only be seen by users who have access.') ?></p>
